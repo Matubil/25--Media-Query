@@ -1,0 +1,69 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+}
+
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-main{
+    width: 100%;
+}
+
+.info-container{
+    width: 100%;
+    padding: 1rem;
+}
+
+.info-title{
+    font-size: 1.5rem;
+}
+
+.info-desc{
+    font-size: 1rem;
+}
+
+.section-main{
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    comunmente hay 3 tipos de medidas, llamados puntos de quiebre
+    0-480   481-1000    12
+    0-580   581- cerca de 1000   1000 para adelante escritorio
+    0-672   673-990     991-infite
+*/
+@media screen and (min-width: 700px) and (max-width: 1100px) { /*como minimo tenes que tener de ancho 700px y 1100 de max, esto sirve para definir rangos*/
+    body{
+        background-color: darkseagreen;
+    }    
+    .section-main{
+        flex-direction: row;
+    }
+    html{
+        font-size: 16px;
+    }
+    /* 
+    en vez de colocar esto 1 por 1, usamos rem y aca cambiamos solamente el html y cambia todo
+    .info-title{
+        font-size: 20px;
+    }
+    .info-desc{
+        font-size: 16px;
+    } */
+}
+
+@media screen and (max-width: 500px) { /*se va a aplicar cuando la pantalla este con un tamaño de*/
+    body{
+        background-color: cornflowerblue;
+    }
+}
+
